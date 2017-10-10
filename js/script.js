@@ -25,7 +25,8 @@ if (window.location.href.indexOf('courses')) {
  * Parent's multiple children
  */
 (function() {
-
+  if (children.length < 1) return false; 
+  
   // Add initial option selector
   $('#calendar_header').append(
     `
