@@ -86,6 +86,6 @@ function changeFavicon(img) {
   favicon.attr('href', img);
 }
 
-if (window.location.hostname.indexOf('beta')) {
+if (window.location.hostname.indexOf('beta') > -1) {
   changeFavicon('https://i.imgur.com/DpAI7L4.png');
 }
