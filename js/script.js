@@ -77,7 +77,7 @@ if (window.location.href.indexOf('calendar')) {
 }
 
 /*
- * Change favicon of beta environment to green icon
+ * Change favicon of beta environment and test environment
  */
 function changeFavicon(img) {
   var favicon = $('link[rel="shortcut icon"]');
@@ -89,3 +89,8 @@ function changeFavicon(img) {
 if (window.location.hostname.indexOf('beta') > -1) {
   changeFavicon('https://lh3.googleusercontent.com/rMNbuDeVMWPAF-q1cl12qI_F_h22LZ05xxlaR6JFkRFgpwhYkq3olTEtUJ1j_D5sWbxqruSyu1RujuoKehlayQ1sDaD-mOikNn5heMw7td840kWR78aPLIvtM3gZsgLo6dVkqbZlpA=s64-no');
 }
+
+if (window.location.hostname.indexOf('test') > -1) {
+  changeFavicon('https://lh3.googleusercontent.com/aWCUYVekhFjnQXVbZ0Iace8zR2UN5_VDaf8bGrsSjfte_LAK8tTBSN2ZyaKVYuBM_jXAvPR1pWey4jNw1AwvtZxXx7qRYi6_RMC3DJZ1tbzqova5BCrY1SVrF9gBgz6gc1Xrmw5z1tdbIgsUEqK1WbJfYaGRJUDSV8VLPJymY5Pkbj41zWrxC7fj5AevrFOMj8UgX70aWJEEfFsgPwPAxOFiL4bYjwjSJIOrqVSeM2HFZ1qzb3NO8Pf2ogLBcERXCA1TgEBpRsBVXuyIOa6SeuwuGramdsrubqM5bqdYBpONPWa-QRwEqmJZPaR8gzK6ijwehvIvRjJxOXmhbmxgf8fBz75Uqi__kZWdJakI9c5Pjz0kFoWt6g6Dl_oYZvYrJnJQ5GCXDkVdXn7jVdsRee3fNZB-ANePDRAEtXz0Q_qSfFTQrMZtRZ-Iou8kqd1jqNDDlA8L4hx1QDI35WAkx-uKsPa7wT-FE70kj_MXay2pcCCgi7hlU_6t8Q_aagoF68vQTt51jr_yvg6YRfHMyzaGhnudhpk5BNNhAFSoyIOWW1QyyYuY4OZZf1YK27q6Kjncw4kG_fC0Qr507CGr8rxoA_7UkpXPijM8alJ-9aUqZFnV9pnBaMiHSuKR8hnq4avKF_lQFC7DnEBnTd8VUf7OPCY3lU5D=w200-h202-no');
+}  
+    
