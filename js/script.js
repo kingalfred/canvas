@@ -87,5 +87,5 @@ function changeFavicon(img) {
 }
 
 if (window.location.hostname.indexOf('beta') > -1) {
-  changeFavicon('https://i.imgur.com/DpAI7L4.png');
+  changeFavicon('https://lh3.googleusercontent.com/rMNbuDeVMWPAF-q1cl12qI_F_h22LZ05xxlaR6JFkRFgpwhYkq3olTEtUJ1j_D5sWbxqruSyu1RujuoKehlayQ1sDaD-mOikNn5heMw7td840kWR78aPLIvtM3gZsgLo6dVkqbZlpA=s64-no');
 }
