@@ -72,7 +72,7 @@ function addChooseChild() {
   
 };
 
-if (window.location.href.indexOf('calendar')) {
+if (window.location.href.indexOf('calendar') > -1) {
   addChooseChild();
 }
 
