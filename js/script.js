@@ -60,7 +60,7 @@ function addChooseChild() {
           <option class="calendar_child">Select Child</option>
           ${
             res.map(
-              x => `<option class="calendar_child" value=${x.id}>${x.name}</option>`
+              x => `<option class="calendar_child" value=${x.courses}>${x.name}</option>`
             )
           }
         </select>
