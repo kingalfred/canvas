@@ -38,12 +38,16 @@ function addChooseChild() {
       p.push(new Promise(function(resolve, reject) {
         $.ajax({
           method: 'get',
-          url: '/api/v1/users/' + child.id + '/courses?per_page=20',
+          url: '/api/v1/users/' + child.id + '/courses?per_page=50&include[]=term',
           dataType: 'json'
         }).then(courses => {
           var listCourses = [];
           for (let course of courses) {
-            listCourses.push('course_' + course.id)
+            if ( course.term &&
+                 course.term.name.includes( (new Date()).getFullYear() ) 
+                ) {
+              listCourses.push('course_' + course.id) 
+            }
           }
           resolve({
             name: child.name,
