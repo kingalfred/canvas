@@ -43,9 +43,7 @@ function addChooseChild() {
         }).then(courses => {
           var listCourses = [];
           for (let course of courses) {
-            if ( course.term &&
-                 course.term.name.includes( (new Date()).getFullYear() ) 
-                ) {
+            if (course.term && (new Date()) > course.term.start_date && (new Date()) < course.term.end_date) {
               listCourses.push('course_' + course.id) 
             }
           }
