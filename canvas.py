@@ -23,6 +23,7 @@ def get_courses(token):
     COURSES_PATH = "courses"
     r = requests.get(BASE_URL + COURSES_PATH,
                      headers={"Authorization": "Bearer " + token})
+    r.raise_for_status()
     return json.loads(r.text)
 
 
@@ -31,6 +32,7 @@ def get_assignments(course_id, token):
     ASSIGNMENTS_PATH = "courses/" + str(course_id) + "/assignments"
     r = requests.get(BASE_URL + ASSIGNMENTS_PATH,
                      headers={"Authorization": "Bearer " + token})
+    r.raise_for_status()
     return json.loads(r.text)
 
 
@@ -55,10 +57,10 @@ if __name__ == '__main__':
     with open(output, "w") as file:
         fieldnames = ["course_id", "course_name",
                       "assignment_id", "assignment_name", "assignment_created", "assignment_due"]
-        writer = csv.DictWritefile, fieldnames = fieldnames)
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
 
         for course in tqdm(courses):
-            assignments=get_assignments(course['id'], token = token)
+            assignments = get_assignments(course['id'], token=token)
             for assignment in assignments:
                 write_assignment(writer, assignment, course)
